@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1、将字符串‘48294746’转换成数组[4,8,2,9,4,7,4,6];并找出其中的最大数
+    var a = '48294746';
+    var b = a.split('');
+    var c = [];
+    for(var r = 0;r<=b.length-1;r++){
+        c.push(Number(b[r]));
+    }
+    var max = c[0];
+    for(var i = 0;i <= c.length-1;i++){
+        if(max < c[i]){
+            max = c[i];
+        }
+    }
+    console.log(max);
+
+    //2、统计数组countryList=["America","Greece","Britain","Canada","China","Egypt"]中包含'a'或'A'元素的个数
+    var countryList=["America","Greece","Britain","Canada","China","Egypt"];
+    var m = 0;
+    for(var d = 0;d<=countryList.length-1;d++){
+        if(countryList[d].indexOf('a')!=-1||countryList.indexOf('A')!=-1){
+            m++;
+        }
+    }
+    console.log('在数组中包含"a"或"A"的元素有'+m+'个');
+    </script>
+</body>
+</html>
