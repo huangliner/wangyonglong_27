@@ -9,54 +9,24 @@
 <body>
     <script>
 // 1、var a=[2,4,{x:2,y:3},true,[5,6]];判断a中的元素是否全为数字类型    ---用every()方法实现
-    var arr=[2,4,{x:2,y:3},true,[5,6]];
-        var tf=arr.every(value=>{
-            return typeof(value)=="number";
-        });
-        console.log(); 
+    var a=[2,4,{x:2,y:3},true,[5,6]];
+        function ChecklfEven(value){
+            return value.constructor===Number
+        }
+        console.log(a.every(ChecklfEven)); 
 
 
 // 2、检测数组var num=[1,6,3,9]中元素的值是否在2-10之间（若num中有非数字返回false)
-    var num = [1,6,3,9];
-    for(var t in num){
-        if(isNaN(num[t])){
-            var y = false;
-            break;
-        }else{
-            var num1 = num.filter(function(value,index,arr){
-        for(i in arr){
-            if(isNaN(arr[index])){
-                return false;
-            }else{
-                return value>=2&&value<=10;
-            }
-        }
-    });
-        }
-    }
-    if(y==false){
-        console.log(false);
-    }else(console.log(num.sort().toString()==num1.sort().toString()?'数组中的元素的值在2-10之间':'数组中的元素的值不在2-10之间'));
-    
+    var num=[1,6,3,9];
+    console.log(num.every(function(value){
+        return value>=2&&value<=10
+    }));
 
 //3、var a=[2,4,{x:2,y:3},true,[5,6]];方法实现判断a中的元素是否全为数字类型    ---用some()方法实现
-    var a = [2,4,{x:2,y:3},true,[5,6]];
-        var c = a.flat();
-        function nice(value,index,arr){
-            if(arr[index].constructor==Number){
-                return false;
-            }else if(arr[index].constructor==Object){
-                    for(var o in arr[index]){
-                        var test = arr[index];
-                        if(test[o]==Number){
-                            return false;
-                        }
-                    }
-                }else{
-                    return false;
-                }
-            }
-            console.log(c.every(nice)?"a中的元素全部为数字类型":"a中的元素不是全部为数字类型");
+    var b=[2,4,{x:2,y:3},true,[5,6]];
+        console.log(!b.some(function(value){
+            return value.constructor!==Number
+        }));
     </script>
 </body>
 </html>
