@@ -9,23 +9,11 @@
 <body>
     <script>
 // 1、var a=[2,4,{x:2,y:3},true,[5,6]];判断a中的元素是否全为数字类型    ---用every()方法实现
-    var a = [2,4,{x:2,y:3},true,[5,6]];
-    var b = a.flat();
-    function even(value,index,arr){
-        if(arr[index].constructor==Number){
-            return true;
-        }else if(arr[index].constructor==Object){
-            for(var i in arr[index]){
-                var test = arr[index];
-                if(test[i]==Number){
-                    return true;
-                }
-            }
-        }else{
-            return false;
-        }
-    }
-        console.log(b.every(even)?"a中的元素全部为数字类型":"a中的元素不是全部为数字类型");
+    var arr=[2,4,{x:2,y:3},true,[5,6]];
+        var tf=arr.every(value=>{
+            return typeof(value)=="number";
+        });
+        console.log(); 
 
 
 // 2、检测数组var num=[1,6,3,9]中元素的值是否在2-10之间（若num中有非数字返回false)
