@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function text(a,b){
+            var obj = {
+                x:'',
+                y:''
+            }
+            obj.x=a;
+            obj.y=b;
+            return console.log(obj);
+        }
+        text(Number(prompt('请输入第一个数')),Number(prompt('请输入第二个数')));
+
+        function num(a,b){
+            return console.log('两个数的和为：'+(a+b)+'两个数的差为:'+(a-b)+'两个数的积为:'+a*b+'两个数的商为:'+a/b)
+        }
+        num(Number(prompt('请输入第一个数')),Number(prompt('请输入第二个数')));
+    </script>
+</body>
+</html>
