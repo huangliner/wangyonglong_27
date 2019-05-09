@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var time = Number(new Date(2019,4,15,0,0,0));
+        var nowTime = Date.now();
+        var timediff=Math.round((time-nowTime)/1000);
+        var day=parseInt(timediff/3600/24);
+        var hour=parseInt(timediff/3600%24);
+        var minute=parseInt(timediff/60%60);
+        var second=timediff%60;
+        document.write("<font style = 'font-size:24px; color:red;'>还剩</font>"+"<font style = 'font-size:24px; color:blue;'>"+day+"</font>"+"<font style = 'font-size:24px; color:red;'>天</font>"+"<font style = 'font-size:24px; color:blue;'>"+hour+"</font>"+"<font style = 'font-size:24px; color:red;'>时</font>"+"<font style = 'font-size:24px; color:blue;'>"+minute+"</font>"+"<font style = 'font-size:24px; color:red;'>分</font>"+"<font style = 'font-size:24px; color:blue;'>"+second+"</font>"+"<font style = 'font-size:24px; color:red;'>秒</font>");
+    </script>
+</body>
+</html>
