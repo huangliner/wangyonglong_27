@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style type="text/css" >
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #nice{
+                margin: 0 auto;
+                margin-top: 200px;
+                width: 500px;
+                height: 200px;
+                border: 1px solid gray;
+            }
+            #nice li{
+                list-style: none;
+                display: block;
+                float: left;
+                width: 100px;
+                height: 30px;	
+                text-align: center;
+                line-height: 30px;
+                background-color: gainsboro;
+            }
+            #nice li:hover{
+                background-color:white;
+            }
+            #nice li a{
+                text-decoration: none;
+                color: black;
+            }
+            div{
+                position: absolute;
+                top: 230px;
+                width: 500px;
+                height: 170px;
+                display: none;
+            }
+            div p{
+                width: 250px;
+                height: 85px;
+                float: left;
+                text-align: center;
+                line-height: 85px;
+            }
+            .niceya{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="nice">
+            <li><a>公告</a></li>
+            <li><a>规则</a></li>
+            <li><a>论坛</a></li>
+            <li><a>安全</a></li>
+            <li><a>公益</a></li>
+            <div class="niceya">
+                <p>道路千万条</p>
+                <p>安全第一条</p>
+                <p>行车不规范</p>
+                <p>亲人两行泪</p>
+            </div>
+            <div>
+                <p>张云雷演出被叫停</p>
+                <p>新华社批评趣头条</p>
+                <p>墓园弄错墓穴位置</p>
+                <p>殴打校友被反杀</p>
+            </div>
+            <div>
+                <p>小米金融致歉</p>
+                <p>滴滴女司机联盟</p>
+                <p>杀公牛前擦干血泪</p>
+                <p>世园会小鸟被掰断</p>
+            </div>
+            <div>
+                <p>阻止装电梯时猝死</p>
+                <p>郭德纲曾调侃英烈</p>
+                <p>泰国解禁大象出口</p>
+                <p>本科生禁带手机</p>
+            </div>
+            <div>
+                <p>意尔康仓库大火</p>
+                <p>湖人抽中第四顺位</p>
+                <p>亚马逊销毁滞销品</p>
+                <p>胜利拘留前审讯</p>
+            </div>
+        </ul>
+<script>
+    var tabs=document.getElementsByTagName("li");
+    var divs=document.getElementsByTagName("div");
+    for(var i=0;i<tabs.length;i++){
+     tabs[i].onclick=function(){thenice(this);}
+    }
+    function thenice(obj){
+        for(var i=0;i<tabs.length;i++){
+            if(tabs[i]==obj){
+            divs[i].className="niceya";
+                }else{
+            divs[i].className="";
+            }
+        }
+    } 
+</script>
+    </body>
+</html>
